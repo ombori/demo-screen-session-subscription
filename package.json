@@ -1,6 +1,6 @@
 {
-  "name": "myorg.screen-session-subscription-demo",
-  "version": "0.1.0",
+  "name": "vnx-test-org-1.screen-session-subscription-demo",
+  "version": "0.2.0",
   "private": true,
   "homepage": "./",
   "scripts": {
@@ -10,7 +10,7 @@
     "prodbuild": "cross-env GENERATE_SOURCEMAP=false react-scripts build && cp package.json build/",
     "build": "rimraf build && yarn prodbuild && yarn schema && omg app build",
     "eject": "react-scripts eject",
-    "pub": "omg app publish",
+    "pub": "yarn build && omg app publish",
     "settings": "omg app settings",
     "upload-description": "omg app upload-description",
     "connect": "omg dev ws"
@@ -32,8 +32,9 @@
   },
   "dependencies": {
     "@ombori/ga-messaging": "^2.90.2",
+    "@ombori/ga-react-qr-run": "^2.197.0",
     "@ombori/ga-settings": "^2.185.0",
-    "@ombori/grid-signals-react": "^2.194.3",
+    "@ombori/grid-signals-react": "^2.197.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

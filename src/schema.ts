@@ -13,4 +13,10 @@ export type Schema = {
    * @default "99 USD"
    */
   productPrice: string;
+
+  /**
+   * @title Mobile endpoint picker
+   * @ui mobileEndpointPicker
+   */
+  mobileEndpoint: any; // TODO: will share the actual type soon
 }

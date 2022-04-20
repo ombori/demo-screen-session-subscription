@@ -1,11 +1,13 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback, useState, useMemo } from 'react';
 import { getInstance as gs } from '@ombori/grid-signals-react';
 import styled from 'styled-components';
 import { useSettings } from '@ombori/ga-settings';
 import { useHeartbeat } from '@ombori/ga-messaging';
 import logo from './logo.svg';
-
 import { Schema as Settings } from './schema';
+import ShortUrlQrCode from '@ombori/ga-react-qr-run';
+
+const isProd = process.env.NODE === 'production';
 
 function App() {
   useHeartbeat();
@@ -21,18 +23,34 @@ function App() {
     }
   }, [productName]);
 
+  const url = useMemo(() => {
+    const sessionId = gs().getInstanceProps().sessionId;
+    if (!isProd) {
+      return 'http://localhost:3001/#sessionId=' + sessionId;
+    }
+
+    return `${settings?.mobileEndpoint?.prod?.url}#sessionId=${sessionId}`;
+  }, [settings]);
+
   useEffect(() => {
+    let sessionState: any;
+    let sessionEvent: any;
     const startSessionSubscription = async () => {
-      const sessionState = await gs().subscribeSessionState((sessionState) => {
+      sessionState  = await gs().subscribeSessionState((sessionState) => {
         setProductCount(sessionState.CART['TEMPORARY-PRODUCT-ID-123']);
       });
-  
-      return () => {
-        sessionState.stop();
-      }
+
+      sessionEvent = await gs().subscribeSessionEvent((sessionEvent) => {
+        console.log('SESSION_EVENT', sessionEvent);
+      });
     }
 
     startSessionSubscription();
+
+    return () => {
+      if (sessionState) sessionState.stop();
+      if (sessionEvent) sessionEvent.stop();
+    }
   }, []);
 
   const onAddToCart = useCallback(() => {
@@ -54,10 +72,18 @@ function App() {
       <RealTimeInfo>
         <p>Real Cart Subscription</p>
         <p>{productName} count: {productCount}</p>
+        <QRCode size={112} url={url} />
+        <span>{url}</span>
+        <p>Scan the QR code to control the screen on mobile</p>
       </RealTimeInfo>
     </Container>
   );
 }
+
+const QRCode = styled(ShortUrlQrCode)`
+  margin-top: 72px;
+  padding-bottom: 12px;
+`;
 
 const Container = styled.div`
   text-align: center;
@@ -101,6 +127,14 @@ const RealTimeInfo = styled.footer`
   pointer-events: none;
   align-items: center;
   justify-content: center;
+
+  p {
+    padding-top: 24px;
+  }
+
+  span {
+    font-size: 12px;
+  }
 `;
 
 export default App;
