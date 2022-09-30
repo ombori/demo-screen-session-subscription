@@ -1475,12 +1475,12 @@
   resolved "https://registry.yarnpkg.com/@ombori/ga-messaging/-/ga-messaging-2.90.2.tgz#e3fb877b9519505146f9981fdacac3a44e7557d1"
   integrity sha512-OxgMS/pRh8PV3T9TIa1aOiLjWJs2FJ1t91TfRwg1T94FWjUIRVt0tVOVEYOK3UYbV747yS7/RzZNDG7w0c53vA==
 
-"@ombori/ga-react-qr-run@^2.197.0":
-  version "2.197.0"
-  resolved "https://registry.yarnpkg.com/@ombori/ga-react-qr-run/-/ga-react-qr-run-2.197.0.tgz#fcb78c76b41d8c8720d355df25e6b5e6ea371795"
-  integrity sha512-HJ+WPtlB2ElSQNV0Nnc10LU6dOE2HErHPMm7Pn6LCsM6IXnmwWpGGUB2p5As/nGAI8mT2lUHVCaJsCFdqh5VLg==
+"@ombori/ga-react-qr-run@^2.218.6":
+  version "2.229.6"
+  resolved "https://registry.yarnpkg.com/@ombori/ga-react-qr-run/-/ga-react-qr-run-2.229.6.tgz#b6259a9a70642f0d973f8a8e08afb795bfecc307"
+  integrity sha512-P4YzMPgyJVjjyebV9OzPIJ6o5lJGueW571Ug53+qv0H4xrmQFjGNCaa26vBe/r0LH5jE5gXdcK7y2FYbGkxhSQ==
   dependencies:
-    "@ombori/grid-signals" "2.197.0"
+    "@ombori/grid-signals" "2.229.6"
     "@types/debug" "^4.1.7"
     "@types/qrcode.react" "^1.0.2"
     abort-controller "^3.0.0"
@@ -1508,6 +1508,20 @@
   version "2.197.0"
   resolved "https://registry.yarnpkg.com/@ombori/grid-signals/-/grid-signals-2.197.0.tgz#0e605c4854436b961d1a1950f85ff7090a8e60a6"
   integrity sha512-BaeJTm4SO/JjTuVaKAaM4pRR0YHAC2BS9gIDWrFudatbOvAV1WjtWETVTVh7sViuX8ar05R7peQFMBTJxuJv+g==
+  dependencies:
+    "@microsoft/signalr" "^6.0.0"
+    isomorphic-fetch "^3.0.0"
+    lodash "^4.17.21"
+    lodash.isnil "^4.0.0"
+    lodash.omitby "^4.6.0"
+    lodash.once "^4.1.1"
+    rimraf "^3.0.2"
+    uuid "^8.3.2"
+
+"@ombori/grid-signals@2.229.6":
+  version "2.229.6"
+  resolved "https://registry.yarnpkg.com/@ombori/grid-signals/-/grid-signals-2.229.6.tgz#d8f828e2864b1b803aa71542a49ed152cc9d2c91"
+  integrity sha512-YYiEUJdPnsKzZy4EtZFCj3l0Ivh6hLI06ATX3pQhTDVg/XEWef+Qcq6VdtBdhk3174K/Y92JD/uB0vsTIE8D0A==
   dependencies:
     "@microsoft/signalr" "^6.0.0"
     isomorphic-fetch "^3.0.0"
