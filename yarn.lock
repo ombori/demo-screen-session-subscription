@@ -1488,26 +1488,38 @@
     debug "^4.3.3"
     qrcode.react "^1.0.1"
 
-"@ombori/ga-settings@2.185.0", "@ombori/ga-settings@^2.185.0":
+"@ombori/ga-settings@^2.185.0":
   version "2.185.0"
   resolved "https://registry.yarnpkg.com/@ombori/ga-settings/-/ga-settings-2.185.0.tgz#9d01672b2848532dc0424b29ce03b426b0c47e78"
   integrity sha512-sozUSBK431B4mp+7qdJ1Cqn7j9dPx2O7H4lgPQ8e+iPcZs6LclnnwVwEK9w5nNCh21uc3ufKdDxw/91YEc00OA==
   dependencies:
     babel-plugin-module-resolver "^4.0.0"
 
-"@ombori/grid-signals-react@^2.197.0":
-  version "2.197.0"
-  resolved "https://registry.yarnpkg.com/@ombori/grid-signals-react/-/grid-signals-react-2.197.0.tgz#2f5e42f248bf91d717d2064ea0e0e5f5060ee1e9"
-  integrity sha512-aabH6eJc3NPk5cHiOP/n99r4WvPC3uxNHe7q1LIa9i7zX8e6V2H1KyP34mcIL34BiJ13ncgZqor23tf5d3QtnA==
+"@ombori/grid-signals-react@^2.218.6":
+  version "2.229.6"
+  resolved "https://registry.yarnpkg.com/@ombori/grid-signals-react/-/grid-signals-react-2.229.6.tgz#c0af721b7cb0c60636f38eeb7ee2aeb4bac56b37"
+  integrity sha512-vXVmLuAgo3MPbx5pczCyRTM9tdsb/GcgDtBC1pQKZakOGQZa0IXDR3bPnnPiRnTcws6SRGmgYGQq9VwDX5/57A==
   dependencies:
-    "@ombori/ga-settings" "2.185.0"
-    "@ombori/grid-signals" "2.197.0"
-    babel-plugin-module-resolver "^4.0.0"
+    "@ombori/grid-signals" "2.229.6"
 
 "@ombori/grid-signals@2.197.0":
   version "2.197.0"
   resolved "https://registry.yarnpkg.com/@ombori/grid-signals/-/grid-signals-2.197.0.tgz#0e605c4854436b961d1a1950f85ff7090a8e60a6"
   integrity sha512-BaeJTm4SO/JjTuVaKAaM4pRR0YHAC2BS9gIDWrFudatbOvAV1WjtWETVTVh7sViuX8ar05R7peQFMBTJxuJv+g==
+  dependencies:
+    "@microsoft/signalr" "^6.0.0"
+    isomorphic-fetch "^3.0.0"
+    lodash "^4.17.21"
+    lodash.isnil "^4.0.0"
+    lodash.omitby "^4.6.0"
+    lodash.once "^4.1.1"
+    rimraf "^3.0.2"
+    uuid "^8.3.2"
+
+"@ombori/grid-signals@2.229.6":
+  version "2.229.6"
+  resolved "https://registry.yarnpkg.com/@ombori/grid-signals/-/grid-signals-2.229.6.tgz#d8f828e2864b1b803aa71542a49ed152cc9d2c91"
+  integrity sha512-YYiEUJdPnsKzZy4EtZFCj3l0Ivh6hLI06ATX3pQhTDVg/XEWef+Qcq6VdtBdhk3174K/Y92JD/uB0vsTIE8D0A==
   dependencies:
     "@microsoft/signalr" "^6.0.0"
     isomorphic-fetch "^3.0.0"
