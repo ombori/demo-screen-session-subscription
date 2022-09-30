@@ -1488,10 +1488,17 @@
     debug "^4.3.3"
     qrcode.react "^1.0.1"
 
-"@ombori/ga-settings@2.185.0", "@ombori/ga-settings@^2.185.0":
+"@ombori/ga-settings@2.185.0":
   version "2.185.0"
   resolved "https://registry.yarnpkg.com/@ombori/ga-settings/-/ga-settings-2.185.0.tgz#9d01672b2848532dc0424b29ce03b426b0c47e78"
   integrity sha512-sozUSBK431B4mp+7qdJ1Cqn7j9dPx2O7H4lgPQ8e+iPcZs6LclnnwVwEK9w5nNCh21uc3ufKdDxw/91YEc00OA==
+  dependencies:
+    babel-plugin-module-resolver "^4.0.0"
+
+"@ombori/ga-settings@^2.226.1":
+  version "2.226.2"
+  resolved "https://registry.yarnpkg.com/@ombori/ga-settings/-/ga-settings-2.226.2.tgz#c570148d5fd03dfe59bf4c2002641497fd2c15cc"
+  integrity sha512-wK7D+8rHHs4Uwiax9YzB3cMgrfr9ir3kI81Q7vQlG39GkxYm7e4D5/ei64PW1Vz7vr2WPLwguhcCjnOt25afGw==
   dependencies:
     babel-plugin-module-resolver "^4.0.0"
 
